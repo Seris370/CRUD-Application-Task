@@ -23,10 +23,6 @@ public class Item {
         return this.id;
     }
 
-    private String getText() {
-        return this.text;
-    }
-
     private void changeText(String text) {
         this.text = text;
     }
