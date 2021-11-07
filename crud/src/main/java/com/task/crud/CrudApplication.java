@@ -19,8 +19,8 @@ public class CrudApplication {
     }
 
     @GetMapping("/hello")
-    public String sayHello(@RequestParam(value = "myName", defaultValue = "World") String name) {
-        return String.format("Hello %s!", name);
+    public String sayHello() {
+        return "Hello World!";
     }
 
     @GetMapping("/items")

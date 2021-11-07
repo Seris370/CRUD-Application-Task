@@ -75,4 +75,11 @@ public class Item {
     public static String getSerializedItems() {
         return items.stream().map(Item::getItem).collect(Collectors.joining("\n"));
     }
+
+    public static void refresh() {
+        synchronized (lock) {
+            count = 0;
+            items = new LinkedList<>();
+        }
+    }
 }
