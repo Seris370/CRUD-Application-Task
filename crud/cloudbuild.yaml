@@ -1,6 +1,7 @@
-steps:
-  - name: "gcr.io/cloud-builders/gcloud"
-    args: ['mvn', 'appengine:deploy']
-timeout: "1600s"
-
 ## mvn -DskipTests package appengine:deploy
+
+steps:
+  - name: "gcr.io/cloud-builders/gcloud-maven"
+    args: ['mvn', 'appengine:deploy']
+
+timeout: "1600s"
